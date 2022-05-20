@@ -8,9 +8,10 @@ class RincianFakultas extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Rincian Fakultas'),
       ),
-      body: Center(
-        child: Text("rincian fakultas"),
-      ),
+      body: Column(children: const [
+              Text("FPMIPA"),
+              Text("FPMIPA is an academic implementing element whose job is to coordinate the implementation of academic activities in the field of Mathematics and Natural Sciences and Mathematics and Natural Sciences education")
+            ]),
     );
   }
 }
