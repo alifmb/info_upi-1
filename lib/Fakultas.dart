@@ -12,7 +12,23 @@ class Fakultas extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris 1"),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    width: 200,
+                    child: Column(
+                      children: [
+                        const Text(
+                          "FPMIPA",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
           ),
           onTap: () {
             //gunakan navigator untuk panggil RincianFakultas
@@ -21,7 +37,30 @@ class Fakultas extends StatelessWidget {
         Container(
             decoration: BoxDecoration(border: Border.all()),
             padding: EdgeInsets.all(14),
-            child: Text("baris kedua")),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    width: 200,
+                    child: Column(
+                      children: [
+                        const Text(
+                          "FPIPS",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
+          ),
+          onTap: () {
+            //gunakan navigator untuk panggil RincianFakultas
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => RincianFakultas()));
+          },
+        ),
       ]),
     );
   }
